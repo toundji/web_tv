@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:web_tv/screens/home.screen.dart';
 import 'app_bar.dart';
 import 'constants.util.dart';
 import 'drawer.dart';
 
 class AppLayout extends StatefulWidget {
-  const AppLayout({super.key, this.screenIndex = 0});
+  const AppLayout({super.key, this.screenIndex = 0, this.initialScreen = const HomeScreen()});
 
   final int screenIndex;
+  final Widget initialScreen;
 
   static String id = "app_layout";
 
@@ -41,7 +43,7 @@ class _AppLayoutState extends State<AppLayout> {
       body: PersistentTabView(
         context,
         controller: tabController,
-        screens: buildScreens(),
+        screens: buildScreens(homeScreenReplacement: widget.initialScreen),
         items: navBarsItems(context),
         confineInSafeArea: true,
         handleAndroidBackButtonPress: true,

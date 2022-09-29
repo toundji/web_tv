@@ -43,9 +43,9 @@ const appBarDecoration = BoxDecoration(
   ),
 );
 
-List<Widget> buildScreens() {
+List<Widget> buildScreens({ Widget homeScreenReplacement = const HomeScreen(), }) {
   return [
-    CommunauteScreen(),
+    homeScreenReplacement,
     CommunauteScreen(),
     CommunauteScreen(),
     CommunauteScreen(),

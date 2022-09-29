@@ -15,7 +15,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
    return BaseScaffold(
-      showAppBar: true,
       scaffoldBody: ListView(
         children: [
           Center(

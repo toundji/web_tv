@@ -29,7 +29,6 @@ class _AppVideoPlayerScreenState extends State<AppVideoPlayerScreen> {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
-      showAppBar: true,
       scaffoldBody: Container(
       padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
       decoration: appGradient,

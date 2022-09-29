@@ -30,7 +30,7 @@ class _AppDrawerState extends State<AppDrawer> {
             getMenu("Action"),
             getMenu("A propos de nous"),
             getMenu("Film & Emissions"),
-            getMenu("Casting", screen: ChaineInfoScreen()),
+            getMenu("Casting", screen: AppLayout(initialScreen: ChaineInfoScreen(),)),
             getMenu("Boutique"),
             getMenu("Espace Annonceurs"),
             getMenu("communauté", isActive: true, screen: AppLayout(screenIndex: 1,)),

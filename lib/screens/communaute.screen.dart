@@ -52,10 +52,6 @@ class _CommunauteScreenState extends State<CommunauteScreen> {
                   color: Colors.white.withOpacity(0.75),
                 ),
               ),
-
-              ///
-              ///
-              ///
               getTitle("Rejoindre mes pages"),
               getLink("Facebook"),
               getLink("Twitter"),
@@ -67,10 +63,6 @@ class _CommunauteScreenState extends State<CommunauteScreen> {
                   color: Colors.white.withOpacity(0.65),
                 ),
               ),
-
-              ///
-              ///
-              ///
               getTitle("Contacter Jawuntad"),
               getLink("Telephone"),
               getLink("Whatsapp"),
