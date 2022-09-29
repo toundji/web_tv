@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_tv/screens/home.screen.dart';
+import 'package:web_tv/utils/app_layout.util.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,14 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Jawuntaa',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
-        scaffoldBackgroundColor: Colors.blueGrey,
-      ),
-      home: const HomeScreen(),
-    );
+    return MaterialApp(title: 'Flutter Demo', home: AppLayout());
   }
 }
