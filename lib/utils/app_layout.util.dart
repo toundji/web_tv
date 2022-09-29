@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:web_tv/utils/drawer.dart';
 import 'constants.util.dart';
 
 class AppLayout extends StatefulWidget {
@@ -31,6 +32,7 @@ class _AppLayoutState extends State<AppLayout> {
     PersistentTabController controller = PersistentTabController(initialIndex: 0);
     return Scaffold(
       backgroundColor: Colors.transparent,
+      drawer: AppDrawer(),
       appBar: AppBar(
         title: Padding(
           padding: EdgeInsets.only(left: 50),
