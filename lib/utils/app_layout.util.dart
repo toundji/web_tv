@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'constants.util.dart';
-import 'functions.util.dart';
 
 class AppLayout extends StatefulWidget {
   const AppLayout({super.key});
@@ -33,13 +32,10 @@ class _AppLayoutState extends State<AppLayout> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       appBar: AppBar(
-        title: Text(
-          "JawuntaaTv",
-          style: TextStyle(
-            color: Colors.white
-          ),
+        title: Padding(
+          padding: EdgeInsets.only(left: 50),
+          child: Image.asset("assets/images/logo_jawuntaa.png"),
         ),
-        centerTitle: true,
         flexibleSpace: Container(decoration: appGradient),
       ),
       body: WillPopScope(
