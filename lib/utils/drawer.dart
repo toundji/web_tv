@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_tv/screens/chaine_info.screen.dart';
 import 'package:web_tv/screens/communaute.screen.dart';
+import 'package:web_tv/screens/home.screen.dart';
 import 'package:web_tv/utils/app_layout.util.dart';
 import 'package:web_tv/utils/constants.util.dart';
 import 'app.util.dart';
@@ -27,14 +28,18 @@ class _AppDrawerState extends State<AppDrawer> {
             Padding(
                 padding: EdgeInsets.only(top: 35, left: 24, bottom: 15),
                 child: Image.asset("assets/images/logo_jawuntaa.png")),
-            getMenu("Action"),
-            getMenu("A propos de nous"),
-            getMenu("Film & Emissions"),
-            getMenu("Casting", screen: AppLayout(initialScreen: ChaineInfoScreen(),)),
-            getMenu("Boutique"),
-            getMenu("Espace Annonceurs"),
-            getMenu("communauté", isActive: true, screen: AppLayout(screenIndex: 1,)),
-            getMenu("Mon compte"),
+            getMenu("Action", screen: CommunauteScreen()),
+            getMenu("A propos de nous", screen: AppLayout(initialScreen: CommunauteScreen())),
+            getMenu("Film & Emissions", screen: CommunauteScreen()),
+            getMenu("Casting", screen: ChaineInfoScreen()),
+            getMenu("Boutique", screen: CommunauteScreen()),
+            getMenu("Espace Annonceurs", screen: CommunauteScreen()),
+            getMenu("communauté",
+              isActive: true,
+              screen: AppLayout(
+                screenIndex: 1,
+              )),
+            getMenu("Mon compte", screen: CommunauteScreen()),
           ],
         ),
       ),
