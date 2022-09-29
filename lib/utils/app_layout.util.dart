@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
-import 'package:web_tv/screens/drawer.dart';
+import 'package:web_tv/utils/app_bar.dart';
+import 'package:web_tv/utils/drawer.dart';
 import 'constants.util.dart';
-import 'functions.util.dart';
 
 class AppLayout extends StatefulWidget {
   const AppLayout({super.key});
@@ -33,14 +33,7 @@ class _AppLayoutState extends State<AppLayout> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       drawer: AppDrawer(),
-      appBar: AppBar(
-        title: Text(
-          "JawuntaaTv",
-          style: TextStyle(color: Colors.white),
-        ),
-        centerTitle: true,
-        flexibleSpace: Container(decoration: appGradient),
-      ),
+      appBar: appBar(),
       body: WillPopScope(
         onWillPop: onWillPop,
         child: Stack(children: <Widget>[

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_tv/screens/app_bar.dart';
-import 'package:web_tv/screens/drawer.dart';
+import 'package:web_tv/utils/app_bar.dart';
+import 'package:web_tv/utils/drawer.dart';
 
 import '../utils/constants.util.dart';
 
