@@ -68,7 +68,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 ListTile(
                   onTap: screen != null
                       ? () {
-                          AppUtils.goToScreen(context, screen);
+                          AppUtils.routeToScreenFromDrawer(context, screen);
                         }
                       : null,
                   title: Text(

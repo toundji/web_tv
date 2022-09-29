@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
-import 'package:web_tv/screens/paused_video.dart';
 import 'package:web_tv/screens/session_info.screen.dart';
 import 'package:web_tv/utils/base_scaffold.util.dart';
-
 import '../utils/app.util.dart';
 import '../utils/constants.util.dart';
 
@@ -144,7 +141,9 @@ class _ChaineInfoScreenState extends State<ChaineInfoScreen> {
   Widget _section() {
     return MaterialButton(
       onPressed: () {
-        AppUtils.goToScreen(context, SessionInfoScreen());
+        AppUtils.routeToScreen(
+          context, SessionInfoScreen()
+        );
       },
       padding: EdgeInsets.symmetric(horizontal: 0.0),
       child: Column(
@@ -164,7 +163,7 @@ class _ChaineInfoScreenState extends State<ChaineInfoScreen> {
             )),
           ),
           Text(
-            "Sesson 1",
+            "Saison 1",
             style: TextStyle(color: Colors.white),
           )
         ],

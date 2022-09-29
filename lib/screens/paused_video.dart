@@ -31,7 +31,7 @@ class _AppPausedViedeoState extends State<AppPausedViedeo> {
   Widget build(BuildContext context) {
     return MaterialButton(
       onPressed: () {
-        AppUtils.goToScreen(context, SessionInfoScreen());
+        AppUtils.routeToScreen(context, SessionInfoScreen());
       },
       padding: EdgeInsets.symmetric(horizontal: 0.0),
       child: Column(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:web_tv/screens/app_video_payer.screen.dart';
-import 'package:web_tv/screens/paused_video.dart';
 import 'package:web_tv/utils/base_scaffold.util.dart';
 import '../utils/app.util.dart';
 import '../utils/constants.util.dart';
@@ -249,7 +248,7 @@ class _SessionInfoScreenState extends State<SessionInfoScreen> {
   Widget _section() {
     return MaterialButton(
       onPressed: () {
-        AppUtils.goToScreen(context, AppVideoPlayerScreen());
+        AppUtils.routeToScreen(context, AppVideoPlayerScreen());
       },
       padding: EdgeInsets.symmetric(horizontal: 0.0),
       child: Column(
