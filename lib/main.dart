@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_tv/screens/home.screen.dart';
+import 'package:web_tv/utils/app_layout.util.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeScreen(),
+      home: AppLayout()
     );
   }
 }
