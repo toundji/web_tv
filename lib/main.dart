@@ -1,15 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:web_tv/screens/communaute.screen.dart';
+import 'package:web_tv/screens/home.screen.dart';
 import 'package:web_tv/utils/app_layout.util.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(JawuntaaTvApp());
+  });
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class JawuntaaTvApp extends StatelessWidget {
+  const JawuntaaTvApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Flutter Demo', home: AppLayout());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Jawuntaa Tv',
+      home: AppLayout(),
+      routes: {
+        AppLayout.id: (context) => AppLayout(),
+        HomeScreen.id: (context) => HomeScreen(),
+        CommunauteScreen.id: (context) => CommunauteScreen()
+      },
+    );
   }
 }

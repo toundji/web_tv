@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:web_tv/screens/communaute.screen.dart';
 import 'package:web_tv/utils/constants.util.dart';
-import 'app_utils.dart';
+import 'app.util.dart';
 
 class AppDrawer extends StatefulWidget {
   const AppDrawer({super.key});
@@ -23,9 +24,8 @@ class _AppDrawerState extends State<AppDrawer> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 45, left: 24, bottom: 45),
-              child: Image.asset("assets/images/logo_jawuntaa.png")
-            ),
+                padding: EdgeInsets.only(top: 40, left: 24, bottom: 15),
+                child: Image.asset("assets/images/logo_jawuntaa.png")),
             getMenu("Action"),
             getMenu("A propos de nous"),
             getMenu("Film & Emissions"),
@@ -62,7 +62,13 @@ class _AppDrawerState extends State<AppDrawer> {
                 ListTile(
                   onTap: screen != null
                       ? () {
-                          AppUtils.goToScreen(context, screen);
+                          PersistentNavBarNavigator.pushNewScreen(
+                            context,
+                            screen: screen,
+                            withNavBar: true,
+                            pageTransitionAnimation:
+                                PageTransitionAnimation.cupertino,
+                          );
                         }
                       : null,
                   title: Text(

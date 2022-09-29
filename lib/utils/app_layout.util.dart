@@ -9,12 +9,13 @@ import 'constants.util.dart';
 class AppLayout extends StatefulWidget {
   const AppLayout({super.key});
 
+  static String id = "app_layout";
+
   @override
   State<AppLayout> createState() => _AppLayoutState();
 }
 
 class _AppLayoutState extends State<AppLayout> {
-
   late DateTime currentBackPressTime;
 
   @override
@@ -27,48 +28,37 @@ class _AppLayoutState extends State<AppLayout> {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
-    PersistentTabController controller = PersistentTabController(initialIndex: 0);
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      drawer: AppDrawer(),
-      appBar: appBar(),
-      body: WillPopScope(
-        onWillPop: onWillPop,
-        child: Stack(children: <Widget>[
-          PersistentTabView(
-            context,
-            controller: controller,
-            screens: buildScreens(),
-            items: navBarsItems(context),
-            confineInSafeArea: true,
-            //backgroundColor: Colors.black,
-            handleAndroidBackButtonPress: true,
-            resizeToAvoidBottomInset: true,
-            stateManagement: true,
-            navBarHeight: 60,
-            hideNavigationBarWhenKeyboardShows: true,
-            decoration: bottomNavBarDecoration,
-            popAllScreensOnTapOfSelectedTab: true,
-            popActionScreens: PopActionScreensType.all,
-            itemAnimationProperties: const ItemAnimationProperties(
-              // Navigation Bar's items animation properties.
-              duration: Duration(milliseconds: 300),
-              curve: Curves.ease,
-            ),
-            screenTransitionAnimation: const ScreenTransitionAnimation(
-              // Screen transition animation on change of selected tab.
-              animateTabTransition: true,
-              curve: Curves.ease,
-              duration: Duration(milliseconds: 250),
-            ),
-            navBarStyle: NavBarStyle.style6,
-            //onWillPop: onWillPop
-          )
-        ]),
+    PersistentTabController tabController =
+        PersistentTabController(initialIndex: 0);
+    return PersistentTabView(
+      context,
+      controller: tabController,
+      screens: buildScreens(),
+      items: navBarsItems(context),
+      confineInSafeArea: true,
+      handleAndroidBackButtonPress: true,
+      resizeToAvoidBottomInset: true,
+      stateManagement: true,
+      navBarHeight: 60,
+      hideNavigationBarWhenKeyboardShows: true,
+      decoration: bottomNavBarDecoration,
+      popAllScreensOnTapOfSelectedTab: true,
+      popActionScreens: PopActionScreensType.all,
+      itemAnimationProperties: const ItemAnimationProperties(
+        // Navigation Bar's items animation properties.
+        duration: Duration(milliseconds: 300),
+        curve: Curves.ease,
       ),
+      screenTransitionAnimation: const ScreenTransitionAnimation(
+        // Screen transition animation on change of selected tab.
+        animateTabTransition: true,
+        curve: Curves.ease,
+        duration: Duration(milliseconds: 250),
+      ),
+      navBarStyle: NavBarStyle.style6,
+      //onWillPop: onWillPop
     );
   }
 

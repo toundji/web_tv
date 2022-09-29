@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:web_tv/utils/app_bar.dart';
-import 'package:web_tv/utils/drawer.dart';
+import 'package:web_tv/utils/base_scaffold.util.dart';
 
 class CommunauteScreen extends StatefulWidget {
   const CommunauteScreen({super.key});
+
+  static String id = "communaute_screen";
 
   @override
   State<CommunauteScreen> createState() => _CommunauteScreenState();
@@ -12,10 +13,8 @@ class CommunauteScreen extends StatefulWidget {
 class _CommunauteScreenState extends State<CommunauteScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: appBar(),
-      drawer: AppDrawer(),
-      body: ListView(
+    return BaseScaffold(
+      scaffoldBody: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
           Text(
@@ -25,9 +24,7 @@ class _CommunauteScreenState extends State<CommunauteScreen> {
               color: Colors.amber.withOpacity(0.75),
             ),
           ),
-          Container(
-            child: Image.network(""),
-          )
+          Image.network("https://api.lorem.space/image/movie?w=150&h=220"),
         ],
       ),
     );
