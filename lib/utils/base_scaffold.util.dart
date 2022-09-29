@@ -16,9 +16,9 @@ class _BaseScaffoldState extends State<BaseScaffold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.transparent,
-      // drawer: AppDrawer(),
-      // appBar: widget.showAppBar ? appBar() : null,
+      backgroundColor: Colors.transparent,
+      drawer: AppDrawer(),
+      appBar: widget.showAppBar ? appBar() : null,
       body: Container(
           decoration: appGradient,
           child: Stack(

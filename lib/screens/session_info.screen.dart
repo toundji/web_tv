@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_tv/screens/app_video_payer.screen.dart';
 import 'package:web_tv/screens/paused_video.dart';
+import 'package:web_tv/utils/base_scaffold.util.dart';
 import '../utils/app.util.dart';
 import '../utils/constants.util.dart';
 
@@ -14,8 +15,9 @@ class SessionInfoScreen extends StatefulWidget {
 class _SessionInfoScreenState extends State<SessionInfoScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return BaseScaffold(
+      showAppBar: true,
+      scaffoldBody: Container(
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
         decoration: appGradient,
         height: MediaQuery.of(context).size.height,

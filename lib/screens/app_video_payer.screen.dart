@@ -1,8 +1,7 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-
+import 'package:web_tv/utils/base_scaffold.util.dart';
 import '../utils/constants.util.dart';
 
 class AppVideoPlayerScreen extends StatefulWidget {
@@ -29,8 +28,9 @@ class _AppVideoPlayerScreenState extends State<AppVideoPlayerScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
+    return BaseScaffold(
+      showAppBar: true,
+      scaffoldBody: Container(
       padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
       decoration: appGradient,
       height: MediaQuery.of(context).size.height,
@@ -49,7 +49,7 @@ class _AppVideoPlayerScreenState extends State<AppVideoPlayerScreen> {
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.red,
+                            primary: Colors.red,
                             shape: StadiumBorder()),
                         onPressed: () {},
                         child: Padding(

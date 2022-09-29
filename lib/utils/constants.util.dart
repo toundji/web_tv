@@ -45,10 +45,10 @@ const appBarDecoration = BoxDecoration(
 
 List<Widget> buildScreens() {
   return [
-    HomeScreen(), 
     CommunauteScreen(),
-    HomeScreen(),
-    HomeScreen(),
+    CommunauteScreen(),
+    CommunauteScreen(),
+    CommunauteScreen(),
   ];
 }
 

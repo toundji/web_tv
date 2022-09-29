@@ -15,7 +15,6 @@ class _CommunauteScreenState extends State<CommunauteScreen> {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
-      showAppBar: true,
       scaffoldBody: Container(
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
         decoration: appGradient,
@@ -27,7 +26,7 @@ class _CommunauteScreenState extends State<CommunauteScreen> {
             padding: const EdgeInsets.only(left: 16, top: 16, right: 16),
             children: [
               Text(
-                "Communaité",
+                "Communauté",
                 style: TextStyle(color: Colors.amber, fontSize: 20),
               ),
               SizedBox(height: 16.0),
