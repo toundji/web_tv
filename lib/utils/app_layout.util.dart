@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:web_tv/screens/drawer.dart';
 import 'constants.util.dart';
 import 'functions.util.dart';
 
@@ -13,7 +14,6 @@ class AppLayout extends StatefulWidget {
 }
 
 class _AppLayoutState extends State<AppLayout> {
-
   late DateTime currentBackPressTime;
 
   @override
@@ -26,18 +26,17 @@ class _AppLayoutState extends State<AppLayout> {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
-    PersistentTabController controller = PersistentTabController(initialIndex: 0);
+    PersistentTabController controller =
+        PersistentTabController(initialIndex: 0);
     return Scaffold(
       backgroundColor: Colors.transparent,
+      drawer: AppDrawer(),
       appBar: AppBar(
         title: Text(
           "JawuntaaTv",
-          style: TextStyle(
-            color: Colors.white
-          ),
+          style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
         flexibleSpace: Container(decoration: appGradient),

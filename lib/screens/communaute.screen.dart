@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:web_tv/screens/app_bar.dart';
 import 'package:web_tv/screens/drawer.dart';
 
+import '../utils/constants.util.dart';
+
 class CommunauteScreen extends StatefulWidget {
   const CommunauteScreen({super.key});
 
@@ -12,24 +14,8 @@ class CommunauteScreen extends StatefulWidget {
 class _CommunauteScreenState extends State<CommunauteScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: appBar(),
-      drawer: AppDrawer(),
-      body: ListView(
-        padding: const EdgeInsets.all(16.0),
-        children: [
-          Text(
-            "Communauté",
-            style: TextStyle(
-              fontSize: 18.0,
-              color: Colors.amber.withOpacity(0.75),
-            ),
-          ),
-          Container(
-            child: Image.network(""),
-          )
-        ],
-      ),
+    return Container(
+      decoration: appGradient,
     );
   }
 }

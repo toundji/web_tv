@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:web_tv/utils/constants.util.dart';
+import '../screens/communaute.screen.dart';
 import '../screens/home.screen.dart';
 
 List<Widget> buildScreens() {
   return [
-    HomeScreen(), 
-    HomeScreen(), 
-    HomeScreen()
+    HomeScreen(),
+    CommunauteScreen(),
+    HomeScreen(),
   ];
 }
 

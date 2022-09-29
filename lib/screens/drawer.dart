@@ -3,7 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:web_tv/screens/communaute.screen.dart';
 
-import '../utilis/app_utils.dart';
+import '../utils/app_utils.dart';
 
 class AppDrawer extends StatefulWidget {
   const AppDrawer({super.key});
@@ -18,7 +18,7 @@ class _AppDrawerState extends State<AppDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Color.fromARGB(255, 7, 32, 44),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
