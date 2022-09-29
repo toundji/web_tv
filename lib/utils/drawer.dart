@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_tv/screens/chaine_info.screen.dart';
 import 'package:web_tv/screens/communaute.screen.dart';
 import 'package:web_tv/utils/constants.util.dart';
 import 'app_utils.dart';
@@ -28,7 +29,7 @@ class _AppDrawerState extends State<AppDrawer> {
             getMenu("Action"),
             getMenu("A propos de nous"),
             getMenu("Film & Emissions"),
-            getMenu("Casting"),
+            getMenu("Casting", screen: ChaineInfoScreen()),
             getMenu("Boutique"),
             getMenu("Espace Annonceurs"),
             getMenu("communauté", isActive: true, screen: CommunauteScreen()),
