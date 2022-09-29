@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_tv/utils/constants.util.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
