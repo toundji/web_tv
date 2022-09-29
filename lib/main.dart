@@ -7,7 +7,7 @@ import 'package:web_tv/utils/app_layout.util.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_) {
+    .then((_) {
     runApp(JawuntaaTvApp());
   });
 }

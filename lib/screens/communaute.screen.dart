@@ -14,6 +14,7 @@ class _CommunauteScreenState extends State<CommunauteScreen> {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
+      showAppBar: true,
       scaffoldBody: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
