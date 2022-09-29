@@ -15,13 +15,16 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
    return BaseScaffold(
+      showAppBar: true,
       scaffoldBody: ListView(
         children: [
-          Text(
-            "Home",
-            style: TextStyle(
-              fontSize: 18.0,
-              color: Colors.amber.withOpacity(0.75),
+          Center(
+            child: Text(
+              "Home",
+              style: TextStyle(
+                fontSize: 18.0,
+                color: Colors.amber.withOpacity(0.75),
+              ),
             ),
           ),
           Image.network("https://api.lorem.space/image/movie?w=150&h=220"),

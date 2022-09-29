@@ -7,11 +7,13 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:fluttertoast/fluttertoast_web.dart';
+import 'package:video_player_web/video_player_web.dart';
 
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 // ignore: public_member_api_docs
 void registerPlugins(Registrar registrar) {
   FluttertoastWebPlugin.registerWith(registrar);
+  VideoPlayerPlugin.registerWith(registrar);
   registrar.registerMessageHandler();
 }

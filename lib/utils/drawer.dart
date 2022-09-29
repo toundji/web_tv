@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:web_tv/screens/chaine_info.screen.dart';
 import 'package:web_tv/screens/communaute.screen.dart';
+import 'package:web_tv/utils/app_layout.util.dart';
 import 'package:web_tv/utils/constants.util.dart';
 import 'app.util.dart';
 
@@ -16,28 +17,25 @@ class _AppDrawerState extends State<AppDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.92,
-      child: Container(
-        decoration: appGradient,
-        child: Drawer(
-          backgroundColor: Colors.transparent,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                  padding: EdgeInsets.only(top: 40, left: 24, bottom: 15),
-                  child: Image.asset("assets/images/logo_jawuntaa.png")),
-              getMenu("Action"),
-              getMenu("A propos de nous"),
-              getMenu("Film & Emissions"),
-              getMenu("Casting"),
-              getMenu("Boutique"),
-              getMenu("Espace Annonceurs"),
-              getMenu("communauté", isActive: true, screen: CommunauteScreen()),
-              getMenu("Mon compte"),
-            ],
-          ),
+    return Container(
+      decoration: appGradient,
+      child: Drawer(
+        backgroundColor: Colors.transparent,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+                padding: EdgeInsets.only(top: 35, left: 24, bottom: 15),
+                child: Image.asset("assets/images/logo_jawuntaa.png")),
+            getMenu("Action"),
+            getMenu("A propos de nous"),
+            getMenu("Film & Emissions"),
+            getMenu("Casting", screen: ChaineInfoScreen()),
+            getMenu("Boutique"),
+            getMenu("Espace Annonceurs"),
+            getMenu("communauté", isActive: true, screen: AppLayout(screenIndex: 1,)),
+            getMenu("Mon compte"),
+          ],
         ),
       ),
     );
@@ -65,13 +63,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 ListTile(
                   onTap: screen != null
                       ? () {
-                          PersistentNavBarNavigator.pushNewScreen(
-                            context,
-                            screen: screen,
-                            withNavBar: true,
-                            pageTransitionAnimation:
-                                PageTransitionAnimation.cupertino,
-                          );
+                          AppUtils.goToScreen(context, screen);
                         }
                       : null,
                   title: Text(

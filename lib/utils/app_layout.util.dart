@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
-import 'package:web_tv/utils/app_bar.dart';
-import 'package:web_tv/utils/drawer.dart';
+import 'app_bar.dart';
 import 'constants.util.dart';
+import 'drawer.dart';
 
 class AppLayout extends StatefulWidget {
-  const AppLayout({super.key});
+  const AppLayout({super.key, this.screenIndex = 0});
+
+  final int screenIndex;
 
   static String id = "app_layout";
 
@@ -31,7 +33,7 @@ class _AppLayoutState extends State<AppLayout> {
   @override
   Widget build(BuildContext context) {
     PersistentTabController tabController =
-        PersistentTabController(initialIndex: 0);
+        PersistentTabController(initialIndex: widget.screenIndex);
     return Scaffold(
       backgroundColor: Colors.transparent,
       drawer: AppDrawer(),
