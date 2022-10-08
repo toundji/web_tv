@@ -3,12 +3,13 @@ import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:web_tv/screens/communaute.screen.dart';
+import 'package:web_tv/screens/home.screen.dart';
 import 'app_bar.dart';
 import 'constants.util.dart';
 import 'drawer.dart';
 
 class AppLayout extends StatefulWidget {
-  const AppLayout({super.key, this.screenIndex = 0, this.initialScreen = const CommunauteScreen()});
+  const AppLayout({super.key, this.screenIndex = 0, this.initialScreen = const HomeScreen()});
 
   final int screenIndex;
   final Widget initialScreen;

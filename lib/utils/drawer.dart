@@ -25,9 +25,7 @@ class _AppDrawerState extends State<AppDrawer> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-                padding: EdgeInsets.only(top: 35, left: 24, bottom: 15),
-                child: Image.asset("assets/images/logo_jawuntaa.png")),
+            Expanded(child: Image.asset("assets/images/logo_jawuntaa.png"),),
             getMenu("Action", screen: CommunauteScreen()),
             getMenu("A propos de nous", screen: AppLayout(initialScreen: CommunauteScreen())),
             getMenu("Film & Emissions", screen: CommunauteScreen()),
@@ -56,7 +54,7 @@ class _AppDrawerState extends State<AppDrawer> {
                   height: 45,
                   width: 8.0,
                   color: Colors.red,
-                  margin: EdgeInsets.only(left: 4, bottom: 16),
+                  margin: EdgeInsets.only(left: 4, bottom: 14),
                 )
               : Container(
                   width: 8.0,
@@ -74,7 +72,7 @@ class _AppDrawerState extends State<AppDrawer> {
                   title: Text(
                     title,
                     style: TextStyle(
-                      fontSize: 18.0,
+                      fontSize: 15.0,
                       color: Colors.white.withOpacity(0.75),
                     ),
                   ),

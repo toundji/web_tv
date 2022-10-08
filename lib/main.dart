@@ -14,7 +14,6 @@ void main() {
 
 class JawuntaaTvApp extends StatelessWidget {
   const JawuntaaTvApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
